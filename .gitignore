@@ -1,0 +1,4 @@
+# ignore the build files
+/zig-cache
+# ignore the build results
+/zig-out
