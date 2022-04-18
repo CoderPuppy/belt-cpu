@@ -13,12 +13,6 @@ pub fn build(b: *std.build.Builder) void {
 
     const exe = b.addExecutable("belt-cpu", "src/main.zig");
     exe.linkSystemLibrary("c");
-    exe.setTarget(target);
-    exe.setBuildMode(mode);
-    exe.install();
-
-    const exe_gui = b.addExecutable("belt-cpu-gui", "src/gui.zig");
-    exe.linkSystemLibrary("c");
     exe.linkSystemLibrary("gtk4");
     exe.setTarget(target);
     exe.setBuildMode(mode);
